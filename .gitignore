@@ -47,3 +47,10 @@ bower.json
 # Ignore node_modules
 node_modules/
 
+/storage/*
+!/storage/.keep
+/yarn-error.log
+/public/assets
+
+# custom settings
+.vscode
