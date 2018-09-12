@@ -1,0 +1,21 @@
+doctype 5
+html
+  head
+    meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+    meta name="robots" content="noindex,nofollow"
+    title Redblue
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = favicon_link_tag
+
+  body
+    = render 'shared/header'
+    #content
+      #sidebar
+        = render 'shared/sidebar'
+      #main
+        = yield
+
