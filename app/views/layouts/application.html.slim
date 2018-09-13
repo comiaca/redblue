@@ -3,7 +3,7 @@ html
   head
     meta http-equiv="Content-Type" content="text/html; charset=utf-8"
     meta name="robots" content="noindex,nofollow"
-    title Redblue
+    title コミックアカデミー 参加申込システム
     = csrf_meta_tags
     = csp_meta_tag
 
@@ -14,8 +14,13 @@ html
   body
     = render 'header'
     #content
-      #sidebar
-        = render 'sidebar'
-      #main
-        = yield
+      - if @main_cols == 1
+        #main-1col
+          = yield
+      - else
+        #sidebar
+          = render 'sidebar'
+        #main-2col
+          = yield
+    = render 'footer'
 
